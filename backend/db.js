@@ -1,11 +1,11 @@
 const mongoose=require('mongoose');
-const mongoURI = "mongodb://localhost:27017/?directConnection=true";
+const mongoURI = "mongodb://127.0.0.1:27017/chat";
 
 
-const connectToMongo=()=>{
-    mongoose.connect(mongoURI, ()=>{
-        console.log('Connected to Mongo')
-        
+const connectToMongo= async()=>{
+ mongoose.connect(mongoURI,() => {
+        console.log('Connected to Mongo');
+
     })
     
 }
